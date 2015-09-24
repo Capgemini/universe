@@ -1,6 +1,6 @@
 {
   "id": "{{elasticsearch.framework-name}}",
-  "cpus": {{elasticsearch.scheduler.cpu}},
+  "cpus": 1,
   "mem": {{elasticsearch.scheduler.ram}},
   "ports": [0],
   "instances": {{elasticsearch.scheduler.instances}},
@@ -15,7 +15,7 @@
       "timeoutSeconds": 5
     }
   ],
-  "args": ["--zookeeperMesosUrl", "{{mesos.master}}"],
+  "args": ["--zookeeperMesosUrl", "{{mesos.master}}", "--elasticsearchCpu", "0.5"],
   "env": {
     "JAVA_OPTS": "{{elasticsearch.scheduler.java-heap}}"
   },
