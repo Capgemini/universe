@@ -23,7 +23,7 @@
     "type": "DOCKER",
     "docker": {
       "image": "mesos/elasticsearch-scheduler",
-      "network": "HOST",
+      "network": "BRIDGE",
       "forcePullImage": {{elasticsearch.forcePullImage}}
     }
   },
