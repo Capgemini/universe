@@ -6,7 +6,7 @@
   "container": {
     "type": "DOCKER",
     "docker": {
-      "image": "capgemini/logstash-scheduler:0.0.5",
+      "image": {{logstash.scheduler.image}},
       "network": "HOST"
     }
   },

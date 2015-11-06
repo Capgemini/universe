@@ -15,12 +15,10 @@
           "master"
         ]
       },
-
     "logstash": {
       "type": "object",
       "description": "Logstash specific configuration properties",
       "additionalProperties": false,
-
       "properties": {
         "framework-name": {
           "description": "The framework name",
@@ -58,6 +56,11 @@
             "logstash-heap-size":{
               "default":"512",
               "description":"The heap-size in MB that is used to run logstash inside the executor container.",
+              "type":"string"
+            },
+            "image":{
+              "default":"mesos/logstash-executor:0.0.5",
+              "description":"The docker executor image to use.",
               "type":"string"
             },
             "volumes":{
