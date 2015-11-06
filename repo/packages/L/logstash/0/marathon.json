@@ -6,7 +6,7 @@
   "container": {
     "type": "DOCKER",
     "docker": {
-      "image": {{logstash.scheduler.image}},
+      "image": {{logstash.image}},
       "network": "HOST"
     }
   },

@@ -46,6 +46,11 @@
           "description":"The port number of the Logstash-Mesos management front-end. Defaults to 9092.",
           "type":"string"
         },
+        "image":{
+          "default":"mesos/logstash-scheduler:0.0.5",
+          "description":"The docker scheduler image to use.",
+          "type":"string"
+        },
         "executor":{
           "properties":{
             "heap-size":{
@@ -56,11 +61,6 @@
             "logstash-heap-size":{
               "default":"512",
               "description":"The heap-size in MB that is used to run logstash inside the executor container.",
-              "type":"string"
-            },
-            "image":{
-              "default":"mesos/logstash-executor:0.0.5",
-              "description":"The docker executor image to use.",
               "type":"string"
             },
             "volumes":{
