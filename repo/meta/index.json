@@ -78,6 +78,19 @@
       }
     },
     {
+      "currentVersion":"0.0.5",
+      "description":"Logstash framwork for Mesos connecting to unix socket",
+      "framework":true,
+      "name":"logstash",
+      "tags":[
+        "logging",
+        "monitoring"
+      ],
+      "versions":{
+        "0.0.5":"0"
+      }
+    },
+    {
       "currentVersion":"0.11.1",
       "description":"A cluster-wide init and control system for services in cgroups or Docker containers.",
       "framework":true,

@@ -1,0 +1,16 @@
+{
+  "id": "{{logstash.framework-name}}",
+  "cpus": {{logstash.cpus}},
+  "mem": {{logstash.mem}},
+  "instances": {{logstash.instances}},
+  "container": {
+    "type": "DOCKER",
+    "docker": {
+      "image": "capgemini/logstash-scheduler:0.0.5",
+      "network": "HOST"
+    }
+  },
+  "env": {
+    "JAVA_OPTS": "-Xmx256m -Dmesos.logstash.web.port={{logstash.port}} -Dmesos.logstash.framework.name={{logstash.framework-name}} -Dmesos.logstash.logstash.heap.size={{logstash.executor.logstash-heap-size}} -Dmesos.logstash.executor.heap.size={{logstash.executor.heap-size}} -Dmesos.zk={{mesos.master}} -Dmesos.logstash.volumes={{logstash.executor.volumes}}"
+  }
+}
