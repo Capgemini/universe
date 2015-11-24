@@ -1,8 +1,7 @@
-
 {
   "name": "logstash",
-  "version": "0.0.5",
-  "scm": "https://github.com/wallies/logstash.git",
+  "version": "0.0.6",
+  "scm": "https://github.com/mesos/logstash.git",
   "maintainer": "frank.scholten@container-solutions.com",
   "description": "Logstash framwork for Mesos connecting to unix socket",
   "website": "https://github.com/mesos/logstash",

@@ -1,6 +1,7 @@
 {
   "type": "object",
     "properties": {
+
       "mesos": {
         "description": "Mesos specific configuration properties",
         "type": "object",
@@ -15,40 +16,22 @@
           "master"
         ]
       },
+
     "logstash": {
       "type": "object",
       "description": "Logstash specific configuration properties",
       "additionalProperties": false,
+
       "properties": {
+
         "framework-name": {
           "description": "The framework name",
           "type": "string",
           "default": "logstash"
         },
-        "cpus": {
-          "default": 0.5,
-          "description": "CPU shares to allocate to each Marathon instance.",
-          "type": "number"
-        },
-        "instances": {
-          "default": 1,
-          "description": "Number of Marathon instances to run.",
-          "minimum": 0,
-          "type": "number"
-        },
-        "mem": {
-          "default": 300.0,
-          "description": "Memory (MB) to allocate to each Marathon task.",
-          "type": "number"
-        },
         "port":{
           "default":"9092",
           "description":"The port number of the Logstash-Mesos management front-end. Defaults to 9092.",
-          "type":"string"
-        },
-        "image":{
-          "default":"mesos/logstash-scheduler:0.0.5",
-          "description":"The docker scheduler image to use.",
           "type":"string"
         },
         "executor":{

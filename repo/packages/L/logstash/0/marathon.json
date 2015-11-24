@@ -1,8 +1,8 @@
 {
   "id": "{{logstash.framework-name}}",
-  "cpus": {{logstash.cpus}},
-  "mem": {{logstash.mem}},
-  "instances": {{logstash.instances}},
+  "cpus": 0.5,
+  "mem": 300.0,
+  "instances": 1,
   "labels": {
     "DCOS_PACKAGE_NAME": "logstash",
     "DCOS_PACKAGE_IS_FRAMEWORK": "true"
@@ -10,7 +10,7 @@
   "container": {
     "type": "DOCKER",
     "docker": {
-      "image": {{logstash.image}},
+      "image": "mesos/logstash-scheduler:0.0.6",
       "network": "HOST"
     }
   },
@@ -19,3 +19,5 @@
     "JAVA_OPTS": "-Xmx256m -Dmesos.logstash.web.port={{logstash.port}} -Dmesos.logstash.framework.name={{logstash.framework-name}} -Dmesos.logstash.logstash.heap.size={{logstash.executor.logstash-heap-size}} -Dmesos.logstash.executor.heap.size={{logstash.executor.heap-size}} -Dmesos.zk={{mesos.master}} -Dmesos.logstash.volumes={{logstash.executor.volumes}}"
   }
 }
+
+
