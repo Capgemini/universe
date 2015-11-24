@@ -47,6 +47,22 @@
       }
     },
     {
+      "currentVersion":"0.4.3",
+      "description":"DCOS implementation of the Mesos-Elasticsearch framework",
+      "framework":true,
+      "name":"elasticsearch",
+      "tags":[
+        "dcos",
+        "mesos",
+        "framework",
+        "elasticsearch",
+        "elastic"
+      ],
+      "versions":{
+        "0.4.3":"0"
+      }
+    },
+    {
       "currentVersion":"0.1.5",
       "description":"Hadoop Distributed File System (HDFS), Highly Available",
       "framework":true,
