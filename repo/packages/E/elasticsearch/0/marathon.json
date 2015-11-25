@@ -50,6 +50,11 @@
     "docker": {
       "image": "{{elasticsearch.scheduler.image}}",
       "network": "HOST",
+      "portMappings": [{
+        "containerPort": 31105,
+        "hostPort": 0,
+        "protocol": "tcp"
+      }]
       "forcePullImage": {{elasticsearch.force-pull-image}}
     }
   }
