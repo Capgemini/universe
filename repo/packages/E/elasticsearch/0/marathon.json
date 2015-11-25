@@ -2,7 +2,6 @@
   "id": "{{elasticsearch.framework-name}}",
   "cpus": {{elasticsearch.scheduler.cpu}},
   "mem": {{elasticsearch.scheduler.ram}},
-  "ports": [0],
   "instances": {{elasticsearch.scheduler.instances}},
   "labels": {
     "DCOS_PACKAGE_NAME": "elasticsearch",
@@ -27,14 +26,12 @@
     "--webUiPort", "{{elasticsearch.port}}",
     "--frameworkFailoverTimeout", "{{elasticsearch.failover-timeout}}",
     "--frameworkName", "{{elasticsearch.framework-name}}",
-
     "--elasticsearchNodes", "{{elasticsearch.executor.instances}}",
     "--elasticsearchClusterName", "{{elasticsearch.executor.cluster-name}}",
     "--elasticsearchCpu", "{{elasticsearch.executor.cpu}}",
     "--elasticsearchDisk", "{{elasticsearch.executor.disk}}",
     "--elasticsearchRam", "{{elasticsearch.executor.ram}}",
     "--elasticsearchSettingsLocation", "{{elasticsearch.executor.settings-location}}",
-
     "--executorForcePullImage", "{{elasticsearch.force-pull-image}}",
     "--executorHealthDelay", "{{elasticsearch.executor.health-delay}}",
     "--executorImage", "{{elasticsearch.executor.image}}",
@@ -50,11 +47,6 @@
     "docker": {
       "image": "{{elasticsearch.scheduler.image}}",
       "network": "HOST",
-      "portMappings": [{
-        "containerPort": 31105,
-        "hostPort": 0,
-        "protocol": "tcp"
-      }],
       "forcePullImage": {{elasticsearch.force-pull-image}}
     }
   }
